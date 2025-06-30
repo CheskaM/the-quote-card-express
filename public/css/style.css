@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #3e1f71, #d8458f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    padding: 40px 30px;
+    border: 2px solid white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    gap: 2rem;
+
+}
+
+.quote-text {
+    quotes: "“" "”";
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.author-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.quote-text::before {
+    content: open-quote;
+    font-size: 4rem;
+    color: white;
+    margin-right: 4rem;
+}
+
+.quote-text::after {
+    content: close-quote;
+    font-size: 4rem;
+    color: white;
+    margin-left: 4rem;
+}
+
