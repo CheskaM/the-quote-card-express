@@ -6,50 +6,73 @@ body {
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .background-img{
-    background-image: url("img/InternetPic.jpg");
+    background-image: url("./img/InternetPic.jpg");
 }
 
 .quote-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 700px;
-    padding: 40px 30px;
+    padding: 2rem;
     border: 2px solid white;
     text-align: center;
     align-items: center;
     justify-content: center;
     color: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
     gap: 2rem;
+    border-radius:  12px;
+    box-sizing: border-box;
 
 }
 
 .quote-text {
     quotes: "“" "”";
     position: relative;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.4;
+    word-break: break-word;
+    padding: 0 1rem;
 }
 
 .author-text {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-style: italic;
     margin-top: 10px;
 }
 
 .quote-text::before {
     content: open-quote;
-    font-size: 4rem;
+    font-size: 3rem;
+    vertical-align: top;
     color: white;
-    margin-right: 4rem;
+    margin-right: 0.5rem;
 }
 
 .quote-text::after {
     content: close-quote;
-    font-size: 4rem;
+    font-size: 3rem;
+    vertical-align: bottom;
     color: white;
-    margin-left: 4rem;
+    margin-left: 0.5rem;
 }
 
+@media (max-width: 400px){
+    .quote-container {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .quote-text::before,
+    .quote-text::after{
+        font-size: 2 rem;
+    }
+}
