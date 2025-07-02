@@ -6,6 +6,21 @@ const elements = {
 };
 
 async function getRandomImage() {
+    const endpoint = "https://unsplash.com/photos/KR2mdHJ5qMg";
+    try {
+        const response = await fetch(endpoint);
+        const returnedData = await response.json();
+        const receivedPhotoUrl = returnedData.data;
+
+        const imgDiv = document.querySelector(".background-img");
+        imgDiv.style.backgroundImage = `url(${receivedPhotoUrl})`;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getRandomImage();
+/*async function getRandomImage() {
     const client_id = "pFqrYbhIAXs";
     const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
     try {
@@ -20,7 +35,7 @@ async function getRandomImage() {
     }
 }
 
-getRandomImage();
+getRandomImage();*/
 /*const quotes = [
     {
         quote: "All things are difficult before they are easy!",
