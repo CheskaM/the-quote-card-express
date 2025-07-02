@@ -8,6 +8,10 @@ body {
     font-family: sans-serif;
 }
 
+.background-img{
+    background-image: url("im");
+}
+
 .quote-container {
     display: flex;
     flex-direction: column;
